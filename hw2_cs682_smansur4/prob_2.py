@@ -17,7 +17,8 @@ def ComputeHistograms(path):
             img_bit_shifted = ((b_channels >> 5)<<6) + ((g_channels>>5)<<3) + (r_channels>>5)
             img_flat = img_bit_shifted.ravel()
             histogram, bins = np.histogram(img_flat,bins=range(0,513))
-            print(len(histogram), len(bins))
+            print(histogram)
+            break
             histograms.append(histogram)
     return histograms
 
