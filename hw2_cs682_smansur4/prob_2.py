@@ -31,6 +31,17 @@ def histogram_chi2(h1, h2):
             chi2_val += (h1[i]-h2[i])**2/(h1[i]+h2[i])
     return chi2_val
 
+def plot(plt, matrix, title):
+    fig, ax = plt.subplots()
+    ax.set_xticks(np.arange(0, 99, 8))
+    ax.set_yticks(np.arange(0, 99, 8))
+    plt.setp(ax.get_xticklabels(), rotation=90, rotation_mode="anchor")
+
+    ax.set_title(title)
+    plt.imshow(matrix)
+    plt.colorbar()
+    plt.show()
+
 def main():
     hist_intersect_1 = []
     hist_intersect_2 = []
@@ -55,19 +66,14 @@ def main():
     #j_pos = [j for j in range(99)]
 
     #fig, ax = plt.subplots(figsize=(500, 250))
-    fig, ax = plt.subplots()
-    ax.set_xticks(np.arange(0, 99, 2))
-    ax.set_yticks(np.arange(0, 99, 2))
-    plt.setp(ax.get_xticklabels(), rotation=90, rotation_mode="anchor")
 
-    ax.set_title("Image Pairs (Histogram Intersection)")
-    plt.imshow(hist_intersection)
-    plt.colorbar()
-    plt.show()
-
+    '''
     ax.set_title("Image Pairs (Chi2)")
     #plt.imshow(chi_square, cmap="Blues_r")
     plt.imshow(chi_square)
     plt.colorbar()
     plt.show()
+    '''
+    plot(plt, hist_intersection, "hist intersection")
+    plot(plt, chi_square, "chi sqr")
 main()

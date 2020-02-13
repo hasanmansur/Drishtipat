@@ -21,11 +21,11 @@ def on_mouse_over(event, x, y, flags, param):
         mean, std = cv2.meanStdDev(window)
         print("window mean", mean)
         print("window std", std)
+        cv2.putText(img, str(mean), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 1)
 
 def img_reset():
     global img
     img = cv2.imread('testimage.png')
-    #print("cleaned")
     cv2.imshow('image', img)
 
 def channel_histogram():
