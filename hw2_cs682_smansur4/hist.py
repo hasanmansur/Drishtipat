@@ -61,9 +61,23 @@ def main():
         HI[i,i] = 1.0
         HCHI2[i,i] = 0.0;
         for j in range(i+1,99):
-            #print(i,j)
             HI[i,j] = HistogramIntersection(h[i],h[j])
-    print("HI", HI)
+            HI[j,i] = HI[i,j]
+            HCHI2[i,j] = HistogramChi2(h[i],h[j])
+            HCHI2[j,i] = HCHI2[i,j]
+
+    # display the matrices using heat maps
+    HIimg = (HI*255).astype('uint8')
+    mx = max(HCHI2.flatten())
+    mn = min(HCHI2.flatten())
+    print (mx, mn)
+    HCI2img = (255-255*(HCHI2-mn)/(mx-mn)).astype('uint8')
+    plt.imshow(HIimg,)
+    plt.colorbar()
+    plt.show()
+    plt.imshow(HCI2img)
+    plt.colorbar()
+    plt.show()
 
 if __name__ == '__main__':
    main()
