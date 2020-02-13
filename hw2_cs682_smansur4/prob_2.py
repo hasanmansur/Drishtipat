@@ -30,6 +30,22 @@ def ComputeHistograms(path):
             histograms.append(histogram)
     return histograms
 
+def HistogramChi2(h1, h2):
+    sum1 = 0.0
+    for i in range(0,512):
+        h11 = h1[i]
+        h22 = h2[i]
+        if (h11+h22>5):
+            sum1 = sum1+(h11-h22)**2/(h11+h22)
+    return sum1
+
+def hist_Chi2(h1, h2):
+    sum1 = 0.0
+    nur = np.square(np.subtract(h1, h2))
+    den = np.add(h1, h2)
+    chi_sq = np.nansum(np.true_divide(nur, den))
+    return chi_sq
+
 def main():
     a_l = []
     b_l = []
@@ -37,14 +53,15 @@ def main():
     HI = np.zeros((99,99),dtype='float')
     for i in range(0,99):
         for j in range(0,99):
-            #HI[i,j] = HistogramIntersection(h[i],h[j])
             b_l.append(HistogramIntersection(h[i],h[j]))
+            #b_l.append(hist_Chi2(h[i],h[j]))
         a_l.append(b_l)
         b_l = []
 
     i_pos = [i for i in range(0, 99)]
     j_pos = [j for j in range(0, 99)]
     val = np.array(a_l)
+    print(val)
 
     fig, ax = plt.subplots()
     im = ax.imshow(val)
