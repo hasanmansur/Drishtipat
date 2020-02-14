@@ -25,8 +25,8 @@ def on_mouse_over(event, x, y, flags, param):
             str_std = "standard deviation: {}".format(txt)
         else:
             mean, std = cv2.meanStdDev(window)
-            str_mean = "mean: R:{} G:{} B:{}".format(mean[2],mean[1], mean[0])
-            str_std = "standard deviation:" + "\n" + "R:{} G:{} B:{}".format(std[2],std[1], std[0])
+            str_mean = "window mean: " + "\n" + "R:{}, G:{}, B:{}".format(mean[2][0],mean[1][0], mean[0][0])
+            str_std = "window standard deviation: " + "\n" + "R:{}, G:{}, B:{}".format(std[2][0],std[1][0], std[0][0])
         str_coordinates = "x:{}, y:{}".format(x,y)
         str_rgb = "R:{},G:{},B:{}".format(img[y][x][2], img[y][x][1], img[y][x][0])
         str_intesity = "intensity:{}".format(sum(img[y][x])/3)
@@ -44,7 +44,7 @@ def img_reset():
     global filename
     #img = cv2.imread("testimage.png")
     img = cv2.imread(filename)
-    dashboard = np.full((400,900), 255, dtype='uint8')
+    dashboard = np.full((600,1200), 255, dtype='uint8')
     cv2.imshow("dashboard", dashboard)
     cv2.imshow('image', img)
 
@@ -55,6 +55,7 @@ def channel_histogram():
         histr = cv2.calcHist([img], [i], None, [256], [0, 256])
         plt.plot(histr, color = col)
         plt.xlim([0, 256])
+    plt.title("Color Channels Histogram")
     plt.show(block=False)
 
 
@@ -70,7 +71,7 @@ def main():
     filename = root.filename
     img = cv2.imread(filename)
 
-    dashboard = np.full((400,900), 255, dtype='uint8')
+    dashboard = np.full((600,1200), 255, dtype='uint8')
     channel_histogram()
     cv2.namedWindow("image")
     cv2.setMouseCallback("image",on_mouse_over)
