@@ -14,12 +14,24 @@ def on_mouse_over(event, x, y, flags, param):
         cv2.rectangle(img,(x-6, y-6), (x+6, y+6),(0,0,255),1)
         intensity = sum(img[y][x])/3
         window = img[y-5:y+5, x-5:x+5]
-        mean, std = cv2.meanStdDev(window)
+        #print(img.shape)
+        x0 = 0
+        xn = img.shape[1] - 1
+        y0 = 0
+        yn = img.shape[0] - 1
+        if (x-5 < x0 or x+5 > xn or y-5 < y0 or y+5 > yn):
+            txt = "window out of boundary"
+            str_mean = "mean: {}".format(txt)
+            str_std = "standard deviation: {}".format(txt)
+        else:
+            mean, std = cv2.meanStdDev(window)
+            str_mean = "mean: R:{} G:{} B:{}".format(mean[2],mean[1], mean[0])
+            str_std = "standard deviation:" + "\n" + "R:{} G:{} B:{}".format(std[2],std[1], std[0])
         str_coordinates = "x:{}, y:{}".format(x,y)
         str_rgb = "R:{},G:{},B:{}".format(img[y][x][2], img[y][x][1], img[y][x][0])
         str_intesity = "intensity:{}".format(sum(img[y][x])/3)
-        str_mean = "mean: R:{} G:{} B:{}".format(mean[2],mean[1], mean[0])
-        str_std = "standard deviation:" + "\n" + "R:{} G:{} B:{}".format(std[2],std[1], std[0])
+        #str_mean = "mean: R:{} G:{} B:{}".format(mean[2],mean[1], mean[0])
+        #str_std = "standard deviation:" + "\n" + "R:{} G:{} B:{}".format(std[2],std[1], std[0])
         output_str = str_coordinates + "\n" + str_rgb + "\n" + str_intesity + "\n" + str_mean + "\n" + str_std
         y0, dy = 50, 50
         for i, line in enumerate(output_str.split('\n')):
