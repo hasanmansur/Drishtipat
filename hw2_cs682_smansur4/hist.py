@@ -38,7 +38,7 @@ def ComputeHistograms(path):
     onlyfiles.sort()
     for f in onlyfiles:
             name = join('ST2MainHall4/',f)
-            #print(name)
+            print(name)
             img = cv2.imread(name)
             b, g, r = cv2.split(img)
             b1 = b.astype('uint16')
@@ -72,7 +72,7 @@ def main():
     mn = min(HCHI2.flatten())
     print (mx, mn)
     HCI2img = (255-255*(HCHI2-mn)/(mx-mn)).astype('uint8')
-    plt.imshow(HIimg,)
+    plt.imshow(HIimg)
     plt.colorbar()
     plt.show()
     plt.imshow(HCI2img)

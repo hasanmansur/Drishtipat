@@ -11,7 +11,8 @@ def create_histograms(files):
             print(file)
             img = cv2.imread(file).astype('uint16')
             b_channels, g_channels, r_channels = img[:, :, 0], img[:, :, 1], img[:, :, 2]
-            img_bit_shifted = ((b_channels >> 5)<<6) + ((g_channels>>5)<<3) + (r_channels>>5)
+            #img_bit_shifted = ((b_channels >> 5)<<6) + ((g_channels>>5)<<3) + (r_channels>>5)
+            img_bit_shifted = (b_channels >> 5) + ((g_channels >> 5) << 3) + ((r_channels >>5) << 6)
             img_flat = img_bit_shifted.ravel()
             histogram, bins = np.histogram(img_flat,bins=range(0,513))
             histograms.append(histogram)
@@ -60,7 +61,7 @@ def main():
 
     g_max = 255
     hist_intersection_scaled = g_max * hist_intersection
-    chi_square_scaled = g_max *(chi_square/max(chi_square.ravel()))
+    chi_square_scaled = g_max * (chi_square/max(chi_square.ravel()))
 
     plot(plt, hist_intersection_scaled, "Histogram intersection")
     plot(plt, chi_square_scaled, "Chi-squared measure")
