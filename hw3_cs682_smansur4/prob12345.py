@@ -56,6 +56,7 @@ def compute_canny_gradients_hog(files):
             bgr_y = b_y + g_y + r_y
             bgr_angle_degree = (np.arctan2(bgr_y, bgr_x) * 180 / np.pi) + 360
             bgr_angle_final = np.rint((bgr_angle_degree % 360)/10)
+            #print(bgr_angle_final)
             #print(bgr_angle_final.min())
             #print(bgr_angle_final.max())
 
