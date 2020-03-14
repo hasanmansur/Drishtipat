@@ -21,6 +21,8 @@ def compute_canny_gradients_hog(files):
             #-------------------------------------------------------------------
             # canny edge detection for gray image
             edges_gray = cv.Canny(img_gray,100,200)
+            #cv.imshow("gray canny", edges_gray)
+            #cv.waitKey(0)
 
             # gradients for gray image
             sobelx = cv.Sobel(img_gray,cv.CV_32F,1,0,ksize=5)
@@ -29,7 +31,14 @@ def compute_canny_gradients_hog(files):
             angle_scaled_down = np.rint(angle/10)
 
             # histogram of gradients
-            hist, bins = np.histogram(angle_scaled_down, bins=37)
+            hist, bins = np.histogram(angle_scaled_down, bins=36)
+            '''
+            plt.plot(hist)
+            plt.title("Histogram of gradients: Gray Image")
+            plt.xlabel("angles(in degrees)")
+            plt.ylabel("number of edges selected")
+            plt.show()
+            '''
 
             # append in hog list
             hogs_gray.append(hist)
@@ -38,12 +47,13 @@ def compute_canny_gradients_hog(files):
             # --------------------------------COLOR-----------------------------
             #-------------------------------------------------------------------
             # canny edge detection for color image
-            edges_color = cv.Canny(img_color,100,200)
+            edges_color = cv.Canny(img_color,72,104)
+            #cv.imshow("color canny", edges_color)
+            #cv.waitKey(0)
 
             # gradients for color image
             sobelx = cv.Sobel(img_color,cv.CV_32F,1,0,ksize=5)
             sobely = cv.Sobel(img_color,cv.CV_32F,0,1,ksize=5)
-            mag, angle = cv.cartToPolar(sobelx, sobely, angleInDegrees=True)
 
             # splitting & combining 3 channels
             b_x = sobelx[:,:,0]
@@ -54,20 +64,27 @@ def compute_canny_gradients_hog(files):
             r_y = sobely[:,:,2]
             bgr_x = b_x + g_x + r_x
             bgr_y = b_y + g_y + r_y
-            bgr_angle_degree = (np.arctan2(bgr_y, bgr_x) * 180 / np.pi) + 360
-            bgr_angle_final = np.rint((bgr_angle_degree % 360)/10)
+            #bgr_angle_degree = (np.arctan2(bgr_y, bgr_x) * 180 / np.pi) + 360
+            #bgr_angle_final = np.rint((bgr_angle_degree % 360)/10)
+            mag, angle = cv.cartToPolar(bgr_x, bgr_y, angleInDegrees=True)
+            bgr_angle_final = np.rint((angle)/10)
+
             #print(bgr_angle_final)
             #print(bgr_angle_final.min())
             #print(bgr_angle_final.max())
 
             # histogram of gradients
-            hist, bins = np.histogram(bgr_angle_final, bins=37)
-
+            hist, bins = np.histogram(bgr_angle_final, bins=36)
+            '''
+            plt.plot(hist)
+            plt.title("Histogram of gradients: Color Image")
+            plt.xlabel("angles(in degrees)")
+            plt.ylabel("number of edges selected")
+            plt.show()
+            '''
             # append in hog list
             hogs_color.append(hist)
-
     return {"hogs_gray": hogs_gray, "hogs_color": hogs_color}
-    #return hogs_color
 
 def histogram_intersection(h1, h2):
     intersection_val = np.true_divide(np.sum(np.minimum(h1,h2)), np.sum(np.maximum(h1,h2)))

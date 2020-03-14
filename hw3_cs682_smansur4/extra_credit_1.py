@@ -27,5 +27,5 @@ print(bgr_x.shape, bgr_y.shape)
 # plotting
 fig, ax = plt.subplots()
 ax.quiver(bgr_x, bgr_y)
-ax.set(aspect=1, title='Quiver Plot: ST2MainHall4001.jpg (Color Image)')
+ax.set(aspect=1, title='Quiver Plot: Color Gradients')
 plt.show()

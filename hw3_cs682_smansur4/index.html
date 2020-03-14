@@ -30,41 +30,67 @@
   <h3>S M Hasan Mansur</h3>
 </center>
 
-<p>*** download file: <a href="cs682_hw2_smansur4.zip">cs682_hw2_smansur4.zip</a></p>
-<p>*** script file has also been submitted along with the homework report via Blackboard</p>
+<p>*** download code file: <a href="cs682_hw3_smansur4.zip">cs682_hw3_smansur4.zip</a></p>
 
-<center><h2>Problem 1:</h2></center>
+<center><h2>Problem 1,2,3,4,5:</h2></center>
 <hr>
 <div class="row">
-  <p>Following image shows:</p>
-  <ul>
-  <li>Loading & displaying a .png image</li>
-  <li>Histograms of three color channels</li>
-  <li>A separate dashboard image showing realtime info of:
-      <ul>
-      <li>Coordinates (x,y) of the reference point (p) </li>
-      <li>RGB values at p</li>
-      <li>Intensity value at p</li>
-      <li>Mean and standard deviation of the window(Wp).</li>
-    </ul>
-  </li>
-  </ul>
-  <img src="prob1.png">
-</div>
-
-<center><h2>Problem 2:</h2></center>
-<hr>
-<div class="row">
-
+  <p>Following image shows the output of Canny edge detection operation on a sample gray image (ST2MainHall4001.jpg)</p>
+  <p>Threshold used: mivVal: 100, maxVal:200</p>
+  <img src="gray_canny.png">
+  <!--<p>Following image shows the output of Canny edge detection operation on a sample color image (ST2MainHall4001.jpg)</p>
+  <img src="clr_canny.png">-->
 </div>
 
 <div class="column">
-  <p>Following image shows the histogram intersection, where large values correspond to high similarity(as depicted by the diagonal)</p>
-  <img src="hist_intersection.png">
+  <p>Following image shows the histogram of gradients of a sample gray image (ST2MainHall4001.jpg)</p>
+  <img src="gray_single_hist.png">
+</div>
+
+
+<div class="column">
+  <p>Following image shows the histogram of gradients of a sample color image (ST2MainHall4001.jpg)</p>
+  <img src="clr_single_hist.png">
+</div>
+
+<div class="column">
+  <p>Following image shows the histogram intersection of gray edge histograms,</p>
+  <p>where large values correspond to high similarity(as depicted by the diagonal)</p>
+  <img src="gray_hist.png">
+</div>
+
+<div class="column">
+  <p>Following image shows the chi square measure of gray edge histograms,</p>
+  <p>where small values correspond to high similarity(as depicted by the diagonal)</p>
+  <img src="gray_chi.png">
+</div>
+
+<div class="column">
+  <p>Following image shows the histogram intersection of color edge histograms</p>
+  <p>where large values correspond to high similarity(as depicted by the diagonal)</p>
+  <img src="clr_hist.png">
+</div>
+
+<div class="column">
+  <p>Following image shows the chi square measure of color edge histograms</p>
+  <p>where small values correspond to high similarity(as depicted by the diagonal)</p>
+  <img src="clr_chi.png">
+</div>
+
+
+<center><h2>Extra credit:</h2></center>
+<hr>
+<div class="column">
+  <p> <b>(1) quiver plot</b> </p>
+  <p>Following image shows the quiver plot of color gradients(image:ST2MainHall4001.jpg)</p>
+  <p>Original image Dimension: width 1600px, height 1200px</p>
+  <p>As my pc was getting hanged while plotting quiver plot,</p>
+  <p>the original image was downsized for faster computation</p>
+  <img src="quiver_color.png">
 </div>
 <div class="column">
-  <p>Following image shows the chi square measure, where small values correspond to high similarity(as depicted by the diagonal)</p>
-  <img src="chi2.png">
+  <p> <b>(2 & 3) color gradients using eigenvalues and eigenvectors</b> </p>
+  <img src="eigen_color.png">
 </div>
 
 </body>

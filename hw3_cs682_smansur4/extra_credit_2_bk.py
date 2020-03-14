@@ -1,6 +1,7 @@
 import cv2 as cv
 import numpy as np
 import argparse
+from matplotlib import pyplot as plt
 W = 52          # window size is WxW
 C_Thr = 0.43    # threshold for coherency
 LowThr = 35     # threshold1 for orientation, it ranges from 0 to 180
@@ -43,6 +44,15 @@ def calcGST(inputIMG, w):
     # Alpha = 0.5 atan2(2*J12/(J22 - J11))
     imgOrientationOut = cv.phase(J22 - J11, 2.0 * J12, angleInDegrees = True)
     imgOrientationOut = 0.5 * imgOrientationOut
+
+    print(imgOrientationOut.min())
+    print(imgOrientationOut.max())
+    hist, bins = np.histogram(imgOrientationOut, bins=18)
+    plt.plot(hist)
+    plt.title("Histogram of gradients: Color Image")
+    plt.xlabel("angles(in degrees)")
+    plt.ylabel("number of edges selected")
+    plt.show()
     # orientation angle calculation (stop)
     return imgCoherencyOut, imgOrientationOut
 
