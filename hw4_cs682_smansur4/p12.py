@@ -6,7 +6,7 @@ from matplotlib import pyplot as plt
 
 files = [file for file in glob.glob("GaitImages/" + "*")]
 files.sort()
-
+area_list = []
 for file in files:
     print(file)
     # image read & pre processing (gray level & thresholding)
@@ -88,6 +88,13 @@ for file in files:
     f.write(line2)
     f.write( "\n")
     f.close()
+    area_list.append(o_area)
 
     # cv2.waitKey(0)
     # cv2.destroyAllWindows()
+
+# image vs area plot
+plt.plot(range(len(files)), area_list)
+plt.xlabel("images")
+plt.ylabel("area")
+plt.show()

@@ -527,4 +527,19 @@
 
 <center><h2>Problem 6</h2></center>
 <hr>
-<b><p>6a</p></b>
+<b><p>(6a)</p></b>
+<p>We observe periodicity in both the results from part 2 & part 5, which means some frames are similar to others.</p>
+<p>In part 5, if we look into the chamfer match scores result image, we observe the periodicity along the diagonals. We also observe periodicity along x axis
+  & y axis.</p>
+<p>In part 2, for example, if we plot the area values (y axis) of all the images (x axis), it will show the periodicity. Following image depicts this:</p>
+<img src="image_vs_area.png">
+
+<b><p>(6b)</p></b>
+<p>Two most distinct phases of gait correspond to the widest and the narrowest profiles. We can detect this from the values of area.</p>
+<p>If we look into the above plot 'images vs area' in 6a, we notice that area values change between high & low values in a periodic manner.</p>
+<p>This clearly depicts the correspondence to the widest and the narrowest profiles.</p>
+
+<b><p>(6c)</p></b>
+<p>We can use curvature to detect joints and segment body parts.</p>
+<p>If we look into the image of curvature estimation using k=3  in Problem3, we notice higher curvature values along shoulder, neck, head, chin etc.</p>
+<p>We can use this information to segment the whole body into two parts, where the upper part holds higher cuvature values.</p>
