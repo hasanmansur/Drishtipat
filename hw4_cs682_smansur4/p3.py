@@ -9,12 +9,12 @@ import matplotlib.cm as cmx
 np.seterr(divide='ignore', invalid='ignore')
 
 # image read & pre processing (gray level & thresholding)
-im = cv2.imread('1.png')
+im = cv2.imread('00000048.png')
 im2 = copy.deepcopy(im)
-print("im.shape", im.shape)
+#print("im.shape", im.shape)
 #print(im.dtype)
 imgray = cv2.cvtColor(im,cv2.COLOR_BGR2GRAY)
-print("imgray.shape", imgray.shape)
+#print("imgray.shape", imgray.shape)
 #print(imgray.dtype)
 ret,thresh = cv2.threshold(imgray,127,255,0)
 #print(thresh.shape)
@@ -55,7 +55,7 @@ for i in range(1,len(x_flat)-1,1):
 #y_flat = np.array([1, 2, 7, 4, 5, 6, 7, 8, 9, 10])
 k_i_list = np.zeros(len(x_flat))
 coordinates_list = []
-k = 4
+k = 3
 for i in range(k,len(x_flat)-k,1):
     #print(x_flat[i], y_flat[i])
     x_coordinate = x_flat[i]
@@ -78,7 +78,7 @@ for i in range(k,len(x_flat)-k,1):
     k_i = abs(2*(a1*b2-b1*a2) / pow((pow(a1,2)+pow(b1,2)),1.5))
     #print(k_i)
     k_i_list[i] = k_i
-print(k_i_list)
+#print(k_i_list)
 
 mn = min(k_i_list)
 mx = max(k_i_list)
@@ -90,7 +90,7 @@ for index in range(len(k_i_list)):
      #print(int(z))
      k_i_list[index] = z
 
-print(k_i_list)
+#print(k_i_list)
 
 # plotting
 plt.plot(x_flat, y_flat)
@@ -104,6 +104,7 @@ for i in range(len(x_flat)):
     colorVal = scalarMap.to_rgba(k_i_list[i])
     plt.plot(x_flat[i], y_flat[i], '.', color=colorVal, markersize=20)
 plt.gca().invert_yaxis()
+plt.title("curvature estimation (k = " + str(k) + ")")
 plt.show()
 
 
