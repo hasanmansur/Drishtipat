@@ -6,7 +6,8 @@
 
  code: prob_1.py
 
- 2.
+ 2. For this part we will use the images from ST2MainHall4 folder.
+
    - Building color histograms for all images in the folder 'ST2MainHall4'. Color histogram should be
    512-bin: [(r/32) ∗ 64 + (g/32) ∗ 8 + b/32] will convert a color value into an index. To be noted that 
    all divisions are integer divisions as in C programming language. That means that they can be accomplished using bit shifts.
