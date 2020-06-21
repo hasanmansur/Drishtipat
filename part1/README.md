@@ -7,3 +7,7 @@
    What is the size of the smallest rectangular image needed to pack the pyramid.
 
    code: part1.py
+
+Results
+-------
+https://hasanmansur.github.io/drishtipat/part1/
