@@ -2,9 +2,9 @@
 
  1. Implementing the following exercise from the book "Concise Computer Vision"
 
- ![Image of picks](https://hasanmansur.github.io/drishtipat/part2/prob1.png)
+    ![Image of picks](https://hasanmansur.github.io/drishtipat/part2/prob1.png)
 
- code: prob_1.py
+    code: prob_1.py
 
  2. For this part we will use the images from ST2MainHall4 folder.
 
@@ -26,6 +26,8 @@
        Small values correspond to high similarity.
 
    - Comparing all image pairs with the use of histogram comparison functions.
+
+   code: prob_2.py
 
 Results
 -------
