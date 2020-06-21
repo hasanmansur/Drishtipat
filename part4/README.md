@@ -1,7 +1,4 @@
-# Part 4
-
-Feature Extraction | Curvature & Distance Transform computation | Chamfer matching
-----------------------------------------------------------------------------------
+# Part 4 (Feature Extraction | Curvature & Distance Transform computation | Chamfer matching)
 
 The binary images in the GaitImages folder are images of a moving person imaged from a side. The task is to apply a variety of algorithms for feature
 extraction and image recognition to these images. There are several stages to this task:
@@ -38,3 +35,6 @@ provided sequence.
 (b) Two most distinct phases of gait correspond to the widest and the narrowest profiles.
 Can you detect them from features displayed in 2.
 (c) Could you use curvature to detect joints and segment body parts? How?
+
+
+
