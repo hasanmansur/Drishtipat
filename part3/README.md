@@ -1,4 +1,4 @@
-# Part 3 (Color Gradients | Edge Detection | Edge histograms | Histogram Comparison)
+# Part 3 (Gradients | Edge Detection | Edge histograms | Histogram Comparison)
 
 There are several stages to this task:
 
