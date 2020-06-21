@@ -2,7 +2,7 @@
 
  - Implementing the following exercise from the book "Concise Computer Vision"
 
- ![Image of picks](https://hasanmansur.github.io/UnemploymentVisualizer/images/picks.png)
+ ![Image of picks](https://hasanmansur.github.io/drishtipat/part2/prob_1.png)
 
  code: prob_1.py
 
