@@ -11,38 +11,36 @@ extraction and image recognition to these images. There are several stages to th
 
    code: p12.py
 
-2. Create a table with computed values for all frames: display the computed features. For
-deficits of convexity compute the number and their total area.
+2. 
+   - Creating a table with computed values for all frames
+   - Displaying the computed features. For deficits of convexity computing the number and their total area.
 
    code: p12.py
 
-3. Given an image boundary implement the method from the book to compute curvature
-along the boundary. Use color coding to display computed values in an image. The color
-scheme should be used to display curvature with higher curvature values represented by
-‘hotter’ colors. Mark the local maxima of the curvature. You should experiment with the
-window size (−k; +k) to determine what works well for curvature estimation. Discuss your
-choices.
+3. 
+   - Given an image boundary, implementing the method from the book "Concise Computer Vision" to compute curvature along the boundary. 
+   - Using color coding to display computed values in an image. The color scheme should be used to display curvature with higher curvature values represented by
+     ‘hotter’ colors. 
+   - Experimenting with the window size (−k; +k) to determine what works well for curvature estimation.
 
    code: p3.py
 
-4. Given a silhouette boundary its distance transform corresponds to distances of nonboundary pixels to nearest boundary point. Compute distance transform for all boundaries.
-The algorithm is described in the book. Use Euclidean distance transform. Display at least
-two files showing the computed distance transform results.
+4. Given a silhouette boundary its distance transform corresponds to distances of nonboundary pixels to nearest boundary point. 
+   - Using  Euclidean distance transform to compute distance transform for all boundaries. The algorithm is described in the book "Concise Computer Vision".
+   - Displaying at least two files to show the computed distance transform results.
 
    code: p4.py
 
 5. Chamfer matching is a technique used for matching (possibly noisy) image boundaries.
-It utilizes distance transform. The method will be described in class and the slides will be
-posted. Implement chamfer matching and use it to match all pairs of gait images in the
-provided sequence.
+   - Implementing chamfer matching and using it to match all pairs of gait images in the provided sequence.
 
    code: p5.py
 
-6. Analyze the results in parts 2 and 5. What can you conclude.
+6. Analysis of the results in steps 2 and 5.
 (a) Is there periodicity and how it shows in results (parts 2 & 5)?
-(b) Two most distinct phases of gait correspond to the widest and the narrowest profiles.
-Can you detect them from features displayed in 2.
-(c) Could you use curvature to detect joints and segment body parts? How?
+(b) Two most distinct phases of gait correspond to the widest and the narrowest profiles. Can we detect them from features displayed in 2.
+(c) Could we use curvature to detect joints and segment body parts? How?
+
 
 Results
 -------
