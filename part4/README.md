@@ -46,4 +46,11 @@ provided sequence.
 Can you detect them from features displayed in 2.
 (c) Could you use curvature to detect joints and segment body parts? How?
 
+Results
+-------
+[Results](https://hasanmansur.github.io/drishtipat/part4/) - https://hasanmansur.github.io/drishtipat/part4/
+
+
+
+
 
