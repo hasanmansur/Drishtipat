@@ -29,6 +29,8 @@ There are several stages to this task:
 
 5. Comparing all edge histogram pairs with the use of histogram comparison functions.
 
+Code: prob12345.py
+
 
 Results
 -------
