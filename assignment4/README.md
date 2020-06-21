@@ -1,3 +1,6 @@
+Feature Extraction | Curvature & Distance Transform computation | Chamfer matching
+----------------------------------------------------------------------------------
+
 The goal is too use image
 features to detected phases of gait. The binary images in the GaitImages folder are images of a moving person imaged from a
 side. The task is to apply a variety of algorithms for feature
