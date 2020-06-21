@@ -48,7 +48,7 @@ Can you detect them from features displayed in 2.
 
 Results
 -------
-[Results](https://hasanmansur.github.io/drishtipat/part4/) - https://hasanmansur.github.io/drishtipat/part4/
+https://hasanmansur.github.io/drishtipat/part4/
 
 
 
