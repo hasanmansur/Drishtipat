@@ -34,7 +34,7 @@ posted. Implement chamfer matching and use it to match all pairs of gait images 
 provided sequence.
 
 6. Analyze the results in parts 2 and 5. What can you conclude.
-a. Is there periodicity and how it shows in results (parts 2 & 5)?
-b. Two most distinct phases of gait correspond to the widest and the narrowest profiles.
+(a) Is there periodicity and how it shows in results (parts 2 & 5)?
+(b) Two most distinct phases of gait correspond to the widest and the narrowest profiles.
 Can you detect them from features displayed in 2.
-c. Could you use curvature to detect joints and segment body parts? How?
+(c) Could you use curvature to detect joints and segment body parts? How?
