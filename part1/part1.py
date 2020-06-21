@@ -9,7 +9,7 @@ ap.add_argument("-i", required = True, help = "path to the image")
 args = vars(ap.parse_args())
 destination_dir = "./"
 
-#------------------------prob2: BGR and GRAYSCALE-------------------------------
+#------------------------prob1: BGR and GRAYSCALE-------------------------------
 # BGR
 image_path = args["i"]
 image = cv2.imread(image_path)
@@ -22,7 +22,7 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 #cv2.waitKey(0)
 cv2.imwrite(destination_dir + "gray.jpeg", gray)
 
-#------------------------prob3: transformations----------------------------------
+#------------------------prob2: transformations----------------------------------
 (image_width, image_height) = (image.shape[1], image.shape[0])
 
 #translation
@@ -76,7 +76,7 @@ hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 #cv2.waitKey(0)
 cv2.imwrite(destination_dir + "hsv.jpeg", hsv)
 
-#------------------------prob4: Gaussian Pyramid--------------------------------
+#------------------------prob3: Gaussian Pyramid--------------------------------
 images_list = []
 image_Gi = cv2.imread(image_path)
 while True:
