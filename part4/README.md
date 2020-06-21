@@ -37,4 +37,11 @@ Can you detect them from features displayed in 2.
 (c) Could you use curvature to detect joints and segment body parts? How?
 
 
+Code files:
+-----------
+1,2 : p12.py
+3   : p3.py
+4   : p4.py
+5   : p5.py
+
 
