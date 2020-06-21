@@ -37,9 +37,9 @@ extraction and image recognition to these images. There are several stages to th
    code: p5.py
 
 6. Analysis of the results in steps 2 and 5.
-(a) Is there periodicity and how it shows in results (parts 2 & 5)?
-(b) Two most distinct phases of gait correspond to the widest and the narrowest profiles. Can we detect them from features displayed in 2.
-(c) Could we use curvature to detect joints and segment body parts? How?
+   - (a) Is there periodicity and how it shows in results (parts 2 & 5)?
+   - (b) Two most distinct phases of gait correspond to the widest and the narrowest profiles. Can we detect them from features displayed in 2.
+   - (c) Could we use curvature to detect joints and segment body parts? How?
 
 
 Results
