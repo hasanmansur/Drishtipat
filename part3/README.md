@@ -34,7 +34,6 @@ Code: prob12345.py
 
 Results
 -------
-https://hasanmansur.github.io/drishtipat/part3/
 
 <!DOCTYPE html>
 <html>
