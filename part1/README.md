@@ -10,7 +10,6 @@
 
 Results
 -------
-https://hasanmansur.github.io/drishtipat/part1/
 
 <!DOCTYPE html>
 <html>
