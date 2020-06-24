@@ -31,7 +31,6 @@
 
 Results
 -------
-https://hasanmansur.github.io/drishtipat/part2/
 
 <!DOCTYPE html>
 <html>
