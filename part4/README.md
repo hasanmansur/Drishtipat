@@ -44,7 +44,6 @@ extraction and image recognition to these images. There are several stages to th
 
 Results
 -------
-https://hasanmansur.github.io/drishtipat/part4/
 
 <!DOCTYPE html>
 <html>
@@ -55,9 +54,8 @@ https://hasanmansur.github.io/drishtipat/part4/
 
 <center><h2>Problem 1</h2></center>
 
-<p>Following images show countours, polygonal approximation, convex hull, convexity defects for two sample images: 00000048.png and 00000051.png </p>
-<p>Computed values for area, perimeter, first & second order moments,
-   number of convexity deficits and their total area are provided in the section Problelm 2</p>
+<p>Following images show countours, polygonal approximation, convex hull, convexity defects for two sample images: 00000048.png and 00000051.png.
+Computed values for area, perimeter, first & second order moments, number of convexity deficits and their total area are provided in the section Problelm 2</p>
 <div class="column">
   <p>contour(00000048.png)</p>
   <img src="Contour_00000048.png">
@@ -103,10 +101,8 @@ https://hasanmansur.github.io/drishtipat/part4/
 <center><h2>Problem 2</h2></center>
 
 <p>Below table shows computed values for area, perimeter, first & second order moments,
-   number of convexity deficits and their total area.
-</p>
-<p>I have computed the values for all 126 images, but as per suggested by Professor I am providing the values
-  for some of them (image: 00000051.png to 00000094.png)</p>
+   number of convexity deficits and their total area. Though I have computed the values for all 126 images,
+   here I am providing the values for some of them (image: 00000051.png to 00000094.png)</p>
 <pre>
   ------------------------------------------00000051.png----------------------------------------------------------------
   (original image) --> m10: 145389.17 | m01: 204798.33 | m20: 7011323.67 | m11 9148993.0 | m02: 16286636.17 | area: 3319.0 | perimeter: 471.71
@@ -307,9 +303,9 @@ https://hasanmansur.github.io/drishtipat/part4/
 
 <center><h2>Problem 4</h2></center>
 
-<p>Following images show the Euclidean distance transform results for sample images: 00000048.png, 00000051.png, 00000058.png, 00000076.png</p>
-<p>For computing distance transform, I implemented the Euclidean distance transform algorithm given in the textbook (Concise Computer Vision, page 112).</p>
-<p>Later I also computed the same thing using the OpenCV implementation (cv.distanceTransform) of this algorithm. Both provide the same result.</p>
+<p>Following images show the Euclidean distance transform results for sample images: 00000048.png, 00000051.png, 00000058.png, 00000076.png.
+For computing distance transform, I implemented the Euclidean distance transform algorithm given in the textbook (Concise Computer Vision, page 112).
+Later I also computed the same thing using the OpenCV implementation (cv.distanceTransform) of this algorithm. Both provide the same result.</p>
 
 <div class="column">
   <img src="edt_00000048.png">
