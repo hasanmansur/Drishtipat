@@ -24,8 +24,8 @@ https://hasanmansur.github.io/drishtipat/part1/
 
 <div class="row">
   <div class="column">
-    <h2>original color image</h2>
-    <img src="original.jpg" width="250">
+    original color image
+    <img src="original.jpg" width="200">
   </div>
   <div class="column">
     <h2>GRAY SCALE image</h2>
