@@ -16,14 +16,8 @@ https://hasanmansur.github.io/drishtipat/part1/
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>S M Hasan Mansur</title>
 </head>
 <body>
-
-<center>
-  <h1>Part1</h1>
-</center>
 
 <center><h2>Problem 1: BGR and GRAYSCALE</h2></center>
 <hr>
