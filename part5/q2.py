@@ -277,21 +277,21 @@ E_zcen(left_image_padded, right_image_padded, 5, d_5)
 E_zcen(left_image_padded, right_image_padded, 6, d_6)
 
 # print row 9,10,11 from the initial message boards
-#print("--------printing row 9,10,11 from the initial message boards---------")
-# print("-------d_0------------------")
-# print_row_9_1_11(d_0)
-# print("-------d_1------------------")
-# print_row_9_1_11(d_1)
-# print("-------d_2------------------")
-# print_row_9_1_11(d_2)
-# print("-------d_3------------------")
-# print_row_9_1_11(d_3)
-# print("-------d_4------------------")
-# print_row_9_1_11(d_4)
-# print("-------d_5------------------")
-# print_row_9_1_11(d_5)
-# print("-------d_6------------------")
-# print_row_9_1_11(d_6)
+print("printing row 9,10,11 from the initial message boards")
+print("-------d_0------------------")
+print_row_9_1_11(d_0)
+print("-------d_1------------------")
+print_row_9_1_11(d_1)
+print("-------d_2------------------")
+print_row_9_1_11(d_2)
+print("-------d_3------------------")
+print_row_9_1_11(d_3)
+print("-------d_4------------------")
+print_row_9_1_11(d_4)
+print("-------d_5------------------")
+print_row_9_1_11(d_5)
+print("-------d_6------------------")
+print_row_9_1_11(d_6)
 
 
 # disparities with min E_zcen values across all message boards
@@ -309,8 +309,9 @@ for i in range(21):
 
 # print("---------printing whole d_min for min disparity values-------------- ")
 # print(DataFrame(d_min))
-# print("---------printing row 9,10,11 for min disparity values-------------- ")
-# print_row_9_1_11(d_min)
+print("\nprinting row 9,10,11 for min disparity values")
+print("-----------------------------------------------")
+print_row_9_1_11(d_min)
 
 # depth images
 d_depth = np.zeros(shape=(im_height,im_width), dtype="uint8")
@@ -320,8 +321,8 @@ for i in range (21):
             d_depth[i][j] = 0 # to skip division by 0 for d=0
         else:
             d_depth[i][j] = int(round((.2 * 500)/d_min[i][j]))
-print("depth values")
-print("------------")
+print("\nprinting row 9,10,11 for depth values of all points in the image for computed disparities")
+print("-------------------------------------------------------------------------------------------")
 #print_row_9_1_11(d_depth)
 print(DataFrame(d_depth))
 cv.imshow('depth mage',d_depth)
@@ -364,8 +365,8 @@ for i in range(21):
             pass
         else:
             d_min_after_t1[i][j] = indices_of_min_values[0]
-print("min. disparity after T1")
-print("-----------------------")
+print("\nmin. disparity after T1")
+print("-------------------------")
 print(DataFrame(d_min_after_t1))
 plt.imshow(d_min_after_t1)
 plt.title("min. disparity after T1")
@@ -403,8 +404,8 @@ for i in range(21):
             pass
         else:
             d_min_after_t2[i][j] = indices_of_min_values[0]
-print("min. disparity after T2")
-print("-----------------------")
+print("\nmin. disparity after T2")
+print("-------------------------")
 print(DataFrame(d_min_after_t2))
 plt.imshow(d_min_after_t2)
 plt.title("min. disparity after T2")
