@@ -5,20 +5,24 @@ The name "Drishtipat" is based on a Bengali word দৃষ্টিপাত, wh
 
 The completed assignments cover the following topics:
 
-## Part 1 (Color & Gray Scale image | Transformations)
+## Part 1 
+- Color & Gray Scale image | Transformations
 - https://github.com/hasanmansur/drishtipat/tree/master/part1
 
-## Part 2 ( Windowing | Mean, Standard Deviation | Color Histograms | Histogram Comparison )
+## Part 2
+- Windowing | Mean, Standard Deviation | Color Histograms | Histogram Comparison
 - https://github.com/hasanmansur/drishtipat/tree/master/part2
 
-## Part 3 (Gradients | Edge Detection | Edge histograms | Histogram Comparison)
+## Part 3
+- Gradients | Edge Detection | Edge histograms | Histogram Comparison
 - https://github.com/hasanmansur/drishtipat/tree/master/part3
 
-
-## Part 4 (Feature Extraction | Curvature & Distance Transform computation | Chamfer matching)
+## Part 4
+- Feature Extraction | Curvature & Distance Transform computation | Chamfer matching
 - https://github.com/hasanmansur/drishtipat/tree/master/part4
 
-## Part 5 (Stereo Matching | Disparity | Depth Image | Belief Propagation)
+## Part 5
+- Stereo Matching | Disparity | Depth Image | Belief Propagation
 - https://github.com/hasanmansur/drishtipat/tree/master/part5
 
 # Language & Libraries used:
