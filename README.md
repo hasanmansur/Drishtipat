@@ -1,7 +1,7 @@
 # Drishtipat (দৃষ্টিপাত)
 
-- A collection of assignments which have been done as a part of the graduate course *Computer Vision*.
-- The name *Drishtipat* is based on a Bengali word *দৃষ্টিপাত*, which means *to have a look at something* :-)
+- A collection of assignments which have been done as a part of the graduate course **Computer Vision**.
+- The name **Drishtipat** is based on a Bengali word **দৃষ্টিপাত**, which means **to have a look at something** :-)
 
 The completed assignments cover the following topics:
 
